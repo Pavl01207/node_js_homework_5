@@ -1,0 +1,35 @@
+@import url(https://fonts.googleapis.com/css?family=Oxanium:200,300,regular,500,600,700,800);
+body {
+  padding: 50px;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  font-family: "Oxanium", serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+h1 {
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #220901;
+}
+a {
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #432534;
+  font-weight: 600;
+}
+a:hover {
+  color: #ffffff;
+  text-shadow: 4px 3px 0 #7a7a7a;
+  color: #183a37;
+}

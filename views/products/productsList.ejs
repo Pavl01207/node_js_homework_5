@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Список товарів</title>
+    <link rel="stylesheet" href="/stylesheets/products/list.css" />
+    <link rel="stylesheet" href="/stylesheets/main.css" />
+    <script src="/javascripts/RequestManager.js"></script>
+  </head>
+  <body>
+    <%-include('sections/header.ejs')%>
+    <table>
+      <thead>
+        <tr>
+          <th>Photo</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% products.forEach(product => { %>
+        <tr>
+          <td><img src="<%= product.imgSrc %>" class="prod-image" /></td>
+          <td>
+            <a href="/products/<%= product.id %>"><%= product.title %></a>
+          </td>
+          <td><%= product.price %></td>
+          <td><%= product.amount %></td>
+          <td>
+            <a href="/products/edit/<%= product.id %>" class="edit-link"
+              >Edit</a
+            >
+          </td>
+          <td>
+            <button
+              onclick="RequestManager.deleteRequest('/products', { id: <%= product.id %> })"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <hr />
+    <a href="/products/create">Додати новий товар</a>
+    <hr />
+
+    <%-include('sections/footer.ejs')%>
+  </body>
+</html>

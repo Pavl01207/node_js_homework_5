@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Інформація про товар</title>
+  </head>
+  <body>
+    <h1><%= product.title %></h1>
+    <div>Amount: <%= product.amount %></div>
+    <div>Price: <%= product.price %></div>
+    <div>Total price: <%= product.amount * product.price %></div>
+
+    <a href="/products">До списку товарів</a>
+  </body>
+</html>
